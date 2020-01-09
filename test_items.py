@@ -8,10 +8,8 @@ def test_add_to_basket_button_is_present(browser, book):
     link = f"http://selenium1py.pythonanywhere.com/catalogue/{book}/"
     browser.get(link)
 
-    time.sleep(10)  # to visually check the language of the page and button
+    time.sleep(10)  # to visually check the language of the page and a button
     try:
         assert browser.find_element_by_css_selector(".btn-add-to-basket")
     except NoSuchElementException:
         assert False, 'The button "Add to basket" is missed 0_0'
-
-
