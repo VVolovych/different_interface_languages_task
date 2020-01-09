@@ -24,7 +24,7 @@ def browser(request):
         fp = webdriver.FirefoxProfile()
         fp.set_preference("intl.accept_languages", user_language)
         print("\nstart firefox browser for test..")
-        browser = webdriver.Firefox()
+        browser = webdriver.Firefox(firefox_profile=fp)
     else:
         print("Browser <browser_name> still is not implemented")
     yield browser
